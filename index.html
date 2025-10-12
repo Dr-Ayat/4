@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عيادة د. آيات محمود</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink-light:#ffe6f0;
+      --pink:#ff99cc;
+      --pink-dark:#ff66b2;
+      --white:#fff;
+      --gray:#777;
+      --shadow:0 8px 25px rgba(255,102,178,0.15);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:'Cairo',sans-serif;
+      background:linear-gradient(180deg,var(--pink-light),#fff);
+      color:#333;
+    }
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:20px;max-width:1100px;margin:auto;
+    }
+    .logo{
+      display:flex;align-items:center;gap:12px;
+    }
+    .logo img{
+      width:70px;height:70px;border-radius:50%;object-fit:cover;box-shadow:var(--shadow);
+    }
+    h1{margin:0;font-size:22px;color:var(--pink-dark)}
+    nav a{
+      margin-left:10px;text-decoration:none;color:white;background:var(--pink-dark);
+      padding:10px 14px;border-radius:12px;transition:all .3s;display:inline-flex;align-items:center;gap:6px;
+    }
+    nav a:hover{background:var(--pink);transform:translateY(-3px);box-shadow:var(--shadow)}
+
+    .hero{max-width:1100px;margin:30px auto;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+    .hero img{width:100%;max-width:450px;border-radius:20px;box-shadow:var(--shadow);}
+    .hero h2{color:var(--pink-dark);font-size:26px;margin-bottom:8px;}
+    .hero p{color:var(--gray);margin:0 0 20px;}
+
+    .tips{max-width:900px;margin:30px auto;padding:20px;background:white;border-radius:20px;box-shadow:var(--shadow);}
+    .tips h3{color:var(--pink-dark);margin-top:0;text-align:center;}
+    .tips ul{list-style-type:'🌸 ';padding-right:20px;color:#555;}
+    .tips li{margin:8px 0;}
+
+    footer{text-align:center;padding:20px;color:var(--gray);font-size:14px;}
+
+    /* Instagram icon */
+    .insta-icon{
+      width:20px;height:20px;display:inline-block;background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-mask:url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png') center/contain no-repeat;
+      mask:url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png') center/contain no-repeat;
+    }
+
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start;}
+      nav a{margin-top:8px;}
+      .hero img{max-width:90%;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- ضع هنا شعار العيادة الخاص بك -->
+      <img src="images/b.jpg" alt="شعار العيادة">
+      <h1>عيادة د. آيات محمود</h1>
+    </div>
+    <nav>
+      <a href="https://www.instagram.com/ayot.99_mh?igsh=MXNlZGE1bGIxZDhuMA==" target="_blank" rel="noopener">
+        <span class="insta-icon"></span> انستغرام
+      </a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>ابتسامتك أجمل معنا 💕</h2>
+    <p>نعتني بصحة أسنانك وجمال ابتسامتك بخبرة واهتمام أنثوي راقٍ.</p>
+    <!-- ضع هنا صورة تجربة قبل وبعد -->
+    <img src="images/a.jpg" alt="قبل وبعد">
+  </section>
+
+  <section class="tips">
+    <h3>نصائح لصحة الأسنان</h3>
+    <ul>
+      <li>اغسل أسنانك مرتين يومياً بمعجون يحتوي على الفلورايد.</li>
+      <li>استخدم الخيط الطبي لتنظيف ما بين الأسنان يومياً.</li>
+      <li>تجنّب المشروبات الغازية والحلويات اللزجة.</li>
+      <li>قم بزيارة طبيب الأسنان مرة كل 6 أشهر للفحص الدوري.</li>
+      <li>اشرب الماء بعد تناول القهوة أو الشاي للحفاظ على بياض الأسنان.</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 عيادة د. آيات محمود — كل الحقوق محفوظة 🌷
+  </footer>
+</body>
+</html>
