@@ -39,14 +39,59 @@
     nav a:hover{background:var(--pink);transform:translateY(-3px);box-shadow:var(--shadow)}
 
     .hero{max-width:1100px;margin:30px auto;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;}
-    .hero img{width:100%;max-width:450px;border-radius:20px;box-shadow:var(--shadow);}
+    .hero img{
+      width:80%;
+      max-width:350px;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      margin-top:10px;
+      transition:transform 0.4s ease;
+    }
+    .hero img:hover{
+      transform:scale(1.05);
+    }
     .hero h2{color:var(--pink-dark);font-size:26px;margin-bottom:8px;}
     .hero p{color:var(--gray);margin:0 0 20px;}
+    .hero h3{
+      color:var(--pink);
+      margin-top:25px;
+      font-size:20px;
+      font-weight:600;
+      animation:fadeIn 2s ease;
+    }
 
-    .tips{max-width:900px;margin:30px auto;padding:20px;background:white;border-radius:20px;box-shadow:var(--shadow);}
-    .tips h3{color:var(--pink-dark);margin-top:0;text-align:center;}
-    .tips ul{list-style-type:'🌸 ';padding-right:20px;color:#555;}
-    .tips li{margin:8px 0;}
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(10px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .tips{
+      max-width:900px;
+      margin:30px auto;
+      padding:20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+    .tip-card{
+      background:white;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding:15px;
+      text-align:center;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      animation:floatUp 1s ease;
+    }
+    .tip-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 8px 25px rgba(255,102,178,0.3);
+    }
+    @keyframes floatUp{
+      from{opacity:0;transform:translateY(10px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    .tip-card h4{color:var(--pink-dark);margin-top:0;}
+    .tip-card p{color:#555;font-size:15px;}
 
     footer{text-align:center;padding:20px;color:var(--gray);font-size:14px;}
 
@@ -60,7 +105,8 @@
     @media (max-width:600px){
       header{flex-direction:column;align-items:flex-start;}
       nav a{margin-top:8px;}
-      .hero img{max-width:90%;}
+      .hero img{max-width:80%;}
+      .tips{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -68,7 +114,7 @@
   <header>
     <div class="logo">
       <!-- ضع هنا شعار العيادة الخاص بك -->
-      <img src="images/b.jpg" alt="شعار العيادة">
+      <img src="images/logo.png" alt="شعار العيادة">
       <h1>عيادة د. آيات محمود</h1>
     </div>
     <nav>
@@ -81,19 +127,28 @@
   <section class="hero">
     <h2>ابتسامتك أجمل معنا 💕</h2>
     <p>نعتني بصحة أسنانك وجمال ابتسامتك بخبرة واهتمام أنثوي راقٍ.</p>
-    <!-- ضع هنا صورة تجربة قبل وبعد -->
-    <img src="images/a.jpg" alt="قبل وبعد">
+    <h3>أحدث أعمالنا في الحشوات التجميلية ✨</h3>
+    <img src="images/before-after.jpg" alt="نتائج الحشوات التجميلية">
+    <p style="margin-top:15px;color:#555;">د. آيات محمود — لمسة فنية تجمع بين الدقة الطبية والجمال الأنثوي 🌷</p>
   </section>
 
   <section class="tips">
-    <h3>نصائح لصحة الأسنان</h3>
-    <ul>
-      <li>اغسل أسنانك مرتين يومياً بمعجون يحتوي على الفلورايد.</li>
-      <li>استخدم الخيط الطبي لتنظيف ما بين الأسنان يومياً.</li>
-      <li>تجنّب المشروبات الغازية والحلويات اللزجة.</li>
-      <li>قم بزيارة طبيب الأسنان مرة كل 6 أشهر للفحص الدوري.</li>
-      <li>اشرب الماء بعد تناول القهوة أو الشاي للحفاظ على بياض الأسنان.</li>
-    </ul>
+    <div class="tip-card">
+      <h4>العناية اليومية</h4>
+      <p>اغسل أسنانك مرتين يومياً بمعجون يحتوي على الفلورايد لتحافظ على صحة اللثة والمينا.</p>
+    </div>
+    <div class="tip-card">
+      <h4>الخيط الطبي</h4>
+      <p>استخدم الخيط الطبي برفق يومياً لإزالة بقايا الطعام ومنع التسوس بين الأسنان.</p>
+    </div>
+    <div class="tip-card">
+      <h4>تجنّب السكريات</h4>
+      <p>قلل من المشروبات الغازية والحلويات اللزجة لتحمي أسنانك من التسوس.</p>
+    </div>
+    <div class="tip-card">
+      <h4>المتابعة الدورية</h4>
+      <p>قم بزيارة طبيب الأسنان مرة كل 6 أشهر للاطمئنان على صحة أسنانك ولثتك.</p>
+    </div>
   </section>
 
   <footer>
